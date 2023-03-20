@@ -1,0 +1,13 @@
+<table class="students-list">
+  <tr>
+    <th>ФИО</th>
+    <th>Дата рождения</th>
+    <th>Курсы</th>
+    <th>Источник</th>
+    <th>Статус</th>
+    <th></th>
+  </tr>
+  <tr app-student
+      *ngFor="let student of students" [student]="student">
+  </tr>
+</table>

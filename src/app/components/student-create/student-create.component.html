@@ -1,0 +1,59 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label for="name">Имя:</label>
+  <input type="text"
+         id="name"
+         name="name"
+         placeholder="ФИО"><br>
+
+  <label for="dob">Дата рождения:</label>
+  <input type="date" id="dob" name="dob"><br><br>
+
+  <label for="source">Источник:</label>
+  <input
+    type="text"
+    id="source"
+    name="source"
+    placeholder="Откуда узнал о центре"
+  ><br>
+
+  <label for="characteristic">Характеристика:</label>
+  <textarea id="characteristic"
+            name="characteristic"
+            placeholder="Информация об ученике"
+  ></textarea><br><br>
+
+  <label >Курсы:</label><br>
+  <input type="checkbox" id="course1" name="courses[]" value="course1">
+  <label for="course1">Психология</label><br>
+  <input type="checkbox" id="course2" name="courses[]" value="course2">
+  <label for="course2">Английский Язык</label><br>
+  <input type="checkbox" id="course3" name="courses[]" value="course3">
+  <label for="course3">Хореография</label><br><br>
+
+  <label>Статус активности:</label>
+  <input type="radio" id="active" name="status" value="active">
+  <label for="active">Активен</label>
+  <input type="radio" id="inactive" name="status" value="inactive">
+  <label for="inactive">Неактивен</label><br><br>
+
+  <label for="parentName">Имя родителя:</label>
+  <input type="text"
+         id="parentName"
+         name="parentName"
+         placeholder="ФИО Родственника"
+  ><br><br>
+
+  <label for="parentPhone">Телефон родителя:</label>
+  <input type="tel"
+         id="parentPhone"
+         name="parentPhone"
+         placeholder="Телефон родителя"
+  ><br><br>
+
+  <input class="py-2 px-4 bg-fuchsia-800 text-white"
+         type="submit"
+         value="Отправить">
+  <input class="py-2 px-4 bg-fuchsia-800 text-white"
+         type="reset"
+         value="Очистить">
+</form>

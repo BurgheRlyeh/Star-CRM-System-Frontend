@@ -1,0 +1,26 @@
+<td class="student-name">
+  <span>{{ student.name }}</span>
+</td>
+<td class="student-birth">
+  <span>{{ student.birthDate | date: 'dd/MM/yyyy' }}</span>
+</td>
+<td class="student-course">
+  <span *ngFor="let course of student.courses">{{ course }}</span>
+</td>
+<td class="student-source">
+  <span>{{ student.source }}</span>
+</td>
+<td class="student-source">
+  <span>{{ student.activeStatus.status }}</span>
+</td>
+<td class="student-nt">
+  <button class="student-btn" (click)="modalService.open()">+</button>
+</td>
+
+
+<app-student-modal *ngIf="modalService.isVisible"
+                   title="Подробная информация"
+                   [modalService]="modalService">
+  <app-student-info [student]="student"></app-student-info>
+</app-student-modal>
+

@@ -1,0 +1,13 @@
+<app-student-table [students]="students"></app-student-table>
+
+<app-student-modal *ngIf="modalService.isVisible"
+                   title="Добавить ученика"
+                   [modalService]="modalService">
+  <app-student-create></app-student-create>
+</app-student-modal>
+
+<button
+  class="rounded-full bg-fuchsia-800 text-white fixed right-5 bottom-5 py-2 px-4"
+  (click)="modalService.open()">
+  +
+</button>

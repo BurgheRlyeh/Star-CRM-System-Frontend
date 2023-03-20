@@ -1,0 +1,34 @@
+<div
+  class="w-[500px] absolute top-16 rounded p-6 bg-white left-1/2 -translate-x-1/2"
+>
+  <label>Имя:</label>
+  <span>{{student.name}}</span><br>
+
+  <label>Дата рождения:</label>
+  <span>{{student.birthDate | date: 'dd/MM/yyyy'}}</span><br>
+
+  <label>Источник:</label>
+  <span>{{student.source}}</span><br>
+
+  <label>Характеристика:</label>
+  <span>{{student.characteristic}}</span><br>
+
+  <label >Курсы:</label>
+  <span *ngFor="let course of student.courses">{{ course }}</span><br>
+
+  <label>Статус активности:</label>
+  <span>{{ student.activeStatus.status }}</span><br>
+
+  <label>Имя родителя:</label>
+  <span>{{student.parent.name}}</span><br>
+
+  <label>Телефон родителя:</label>
+  <span>{{student.parent.phone}}</span><br>
+
+  <input class="py-2 px-4 bg-fuchsia-800 text-white"
+         type="submit"
+         value="Изменить">
+  <input class="py-2 px-4 bg-fuchsia-800 text-white"
+         type="submit"
+         value="Удалить">
+</div>

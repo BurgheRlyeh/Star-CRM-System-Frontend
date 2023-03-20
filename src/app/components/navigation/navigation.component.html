@@ -1,0 +1,8 @@
+<nav class = "absolute top-0 right-0 px-5 left-0 h-[50px] flex justify-between items-center text-white bg-fuchsia-800">
+  <h1 class="font-bold">STAR Система</h1>
+  <span *ngIf="auth.isAuthenticated()">
+    <a routerLink="/students" class="mr-4">Ученики</a>
+    <a routerLink="/about" class="mr-4">О приложении</a>
+    <a routerLink="/" href="#" (click)="logout($event)">Выйти</a>
+  </span>
+</nav>
